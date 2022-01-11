@@ -1,0 +1,36 @@
+.tweetBody {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 95%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  border-image: linear-gradient(to right, #aebde6, #a8b7e0) 0.5;
+  padding: 0.8rem;
+}
+
+.content {
+  font-size: 18px;
+}
+
+.timeAndDate {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.responses {
+  text-align: center;
+}
+
+.replies,
+.shares,
+.likes {
+  color: #1da1f2;
+  font-size: 14px;
+}
+
+.replyValue,
+.shareValue,
+.likeValue {
+  font-size: 14px;
+}
