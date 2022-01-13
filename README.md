@@ -1,7 +1,8 @@
 take a pull from " express-server"
 
 ### Express App
-```cd to server -> run : npm install -> run : npm run nodemon
+```
+cd to server -> run : npm install -> run : npm run nodemon
 ```
 
 ### React App
