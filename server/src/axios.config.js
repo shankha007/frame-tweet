@@ -1,6 +1,5 @@
 import axios from "axios";
 
-//! This token should be secured
 const token =
   "AAAAAAAAAAAAAAAAAAAAAN%2FrTwEAAAAAiNdiHy38D2wQVDtjmm%2FtqpCq8os%3Df0xdoxTFWi848gAFvGnVaJfEwfKcJ5bRjc4TqigCqGY9QrMMhW";
 

@@ -10,12 +10,13 @@
 }
 
 .content {
-  font-size: 18px;
+  font-size: 20px;
+  white-space: pre-line;
 }
 
 .timeAndDate {
   color: #cccccc;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .responses {
@@ -26,11 +27,11 @@
 .shares,
 .likes {
   color: #1da1f2;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .replyValue,
 .shareValue,
 .likeValue {
-  font-size: 14px;
+  font-size: 16px;
 }
