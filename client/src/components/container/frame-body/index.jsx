@@ -1,37 +1,25 @@
 import { useEffect } from "react";
-// import axios from "axios";
+ import axios from "axios";
 import styles from "./index.module.css";
 
 const FrameBody = ({ tweetId }) => {
-  // const token =
-  //   "AAAAAAAAAAAAAAAAAAAAAN%2FrTwEAAAAAiNdiHy38D2wQVDtjmm%2FtqpCq8os%3Df0xdoxTFWi848gAFvGnVaJfEwfKcJ5bRjc4TqigCqGY9QrMMhW";
+  // tweetId is always null , I don;t know how you are planning to pass the tweetId from the parent component
+  tweetId = tweetId || "1481654484409655297"
 
   useEffect(() => {
-    // const endpointURL = "https://api.twitter.com/2/tweets/" + tweetId;
-    // console.log(endpointURL);
-    // const fetchTweet = async () => {
-    //   const params = {
-    //     "tweet.fields":
-    //       "attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,text,withheld",
-    //     expansions:
-    //       "created_atattachments.poll_ids,attachments.media_keys,author_id,geo.place_id,in_reply_to_user_id,referenced_tweets.id,entities.mentions.username,referenced_tweets.id.author_id",
-    //   };
-    //   try {
-    //     const response = await axios.get(endpointURL, {
-    //       params,
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         Authorization: `Bearer ${token}`,
-    //         "Access-Control-Allow-Origin": "*",
-    //       },
-    //     });
-    //     console.log(response);
-    //   } catch (e) {
-    //     console.log("Error: " + e);
-    //   }
-    // };
-    // if (tweetId !== "") fetchTweet();
-    console.log(tweetId);
+  
+    const fetchTweet = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8000/api/tweets/${tweetId}`)
+        console.log(response.data);
+      } catch (error) {
+        if (error.response) {
+          console.log(error.response.data);
+        } else console.log("Error: " + error);
+      }
+    };
+     fetchTweet();
+    console.log({tweetId});
   }, [tweetId]);
 
   return (
