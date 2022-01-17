@@ -1,15 +1,23 @@
 import styles from "./index.module.css";
 
-const Utilities = () => (
+const Utilities = ({ setShowResponses, setShowDate, downloadTweet }) => (
   <div className={styles.wrapper}>
     <div className={`row justify-content-center ${styles.innerWrapper}`}>
       <div className="col">
-        <button type="button" className={`btn btn-dark ${styles.responsesBtn}`}>
+        <button
+          type="button"
+          className={`btn btn-dark ${styles.responsesBtn}`}
+          onClick={setShowResponses}
+        >
           Responses
         </button>
       </div>
       <div className="col">
-        <button type="button" className={`btn btn-dark ${styles.timeBtn}`}>
+        <button
+          type="button"
+          className={`btn btn-dark ${styles.timeBtn}`}
+          onClick={setShowDate}
+        >
           Time
         </button>
       </div>
@@ -17,6 +25,7 @@ const Utilities = () => (
         <button
           type="button"
           className={`btn btn-primary ${styles.downloadBtn}`}
+          onClick={downloadTweet}
         >
           Download
         </button>

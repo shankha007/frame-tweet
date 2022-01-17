@@ -19,7 +19,7 @@ const monthNames = [
   "Dec",
 ];
 
-const Container = ({ tweetId }) => {
+const Container = ({ containerId, tweetId, showResponses, showDate }) => {
   const [tweetBody, setTweetBody] = useState("");
   const [timeAndDate, setTimeAndDate] = useState("");
   const [replies, setReplies] = useState("");
@@ -28,8 +28,6 @@ const Container = ({ tweetId }) => {
   const [userName, setUserName] = useState("");
   const [fullName, setFullName] = useState("");
   const [dp, setDp] = useState("");
-
-  tweetId = tweetId || "1481654484409655297";
 
   const getTweetBody = (obj) =>
     obj
@@ -98,7 +96,7 @@ const Container = ({ tweetId }) => {
   }, [tweetId]);
 
   return (
-    <div className={`container ${styles.wrapper}`}>
+    <div className={`container ${styles.wrapper}`} id={containerId}>
       <FrameHeader userName={userName} fullName={fullName} dp={dp} />
       <FrameBody
         tweetBody={tweetBody}
@@ -106,6 +104,8 @@ const Container = ({ tweetId }) => {
         replies={replies}
         shares={shares}
         likes={likes}
+        showDate={showDate}
+        showResponses={showResponses}
       />
     </div>
   );
