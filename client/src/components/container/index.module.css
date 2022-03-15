@@ -4,9 +4,7 @@
   padding-bottom: 2rem;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  /* background: rgba(255, 255, 255, 0.2); */
-  /*!!! Change this */
-  background: red;
+  background: #e12b38;
 
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
